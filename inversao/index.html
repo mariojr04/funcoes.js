@@ -1,14 +1,15 @@
-<meta charset="UTf-8">
+<meta charset="UTF-8">
 <script>
-  var n = prompt("informe um número: ");
-  var i = 0;
+  var n = parseInt(prompt("Informe um número: "), 10);
   var inverso = 0;
   var resto;
-  while(i < n.length){
+  var original = n;
+
+  while (n > 0) {
     resto = n % 10;
     inverso = inverso * 10 + resto;
-    n = (n - resto) / 10;
-    i = i + 1;
+    n = Math.floor(n / 10);
   }
-  document.write("O inverso de " + n + " é " + inverso);
+
+  document.write("O inverso de " + original + " é " + inverso);
 </script>
